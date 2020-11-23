@@ -7,7 +7,6 @@ export default (ms) => {
      * Number of milliseconds
      * @type {Int}
      */
-    const intMs = parseInt(ms, 10);
 
-    browser.pause(intMs);
+    browser.pause(ms);
 };

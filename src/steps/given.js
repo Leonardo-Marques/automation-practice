@@ -20,10 +20,35 @@ import isEnabled from '../support/check/isEnabled';
 import isDisplayed from '../support/check/isDisplayed';
 import openWebsite from '../support/action/openWebsite';
 import setWindowSize from '../support/action/setWindowSize';
+import pause from '../support/action/pause';
+import email from '../support/action/email';
+import selectionCheckbox from '../support/check/selectionCheckbox';
+import validaTotal from '../support/check/validaTotalCompra';
 
 Given(
-    /^I open the (url|site) "([^"]*)?"$/,
+    /^Eu abro o (url|site) "([^"]*)?"$/,
     openWebsite
+);
+
+Given(
+    /^Eu (guardo|verifico) o valor do elemento "([^"]*)?"$/,
+    validaTotal
+);
+
+
+Given(
+    /^Eu seleciono o checkbox "([^"]*)?"$/,
+    selectionCheckbox
+);
+
+Given(
+    /^Eu preencho o input "([^"]*)?" com um email (novo|salvo)$/,
+    email
+);
+
+Given(
+    /^Eu pauso por (\d+)$/,
+    pause
 );
 
 Given(

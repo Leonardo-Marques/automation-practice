@@ -18,12 +18,12 @@ import setPromptText from '../support/action/setPromptText';
 const { When } = require('cucumber');
 
 When(
-    /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,
+    /^Eu (clico|clico 2x) no (link|botão|elemento) "([^"]*)?"$/,
     clickElement
 );
 
 When(
-    /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
+    /^Eu (adiciono|preencho) "([^"]*)?" no input "([^"]*)?"( e submeto)*$/,
     setInputField
 );
 
@@ -68,7 +68,7 @@ When(
 );
 
 When(
-    /^I scroll to element "([^"]*)?"$/,
+    /^Eu vou ao elemento "([^"]*)?"$/,
     scroll
 );
 
@@ -83,12 +83,12 @@ When(
 );
 
 When(
-    /^I select the (\d+)(st|nd|rd|th) option for element "([^"]*)?"$/,
+    /^Eu seleciono a opção (\d+) do elemento "([^"]*)?"$/,
     selectOptionByIndex
 );
 
 When(
-    /^I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"$/,
+    /^Eu seleciono a opcao com o(name|value|text) "([^"]*)?" no elemento "([^"]*)?"$/,
     selectOption
 );
 

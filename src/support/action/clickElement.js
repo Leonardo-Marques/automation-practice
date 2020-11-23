@@ -20,6 +20,6 @@ export default (action, type, selector) => {
     const method = (action === 'click') ? 'click' : 'doubleClick';
 
     checkIfElementExists(selector2);
-
+    browser.pause(500);
     $(selector2)[method]();
 };

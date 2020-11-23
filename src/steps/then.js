@@ -29,8 +29,13 @@ import isVisible from '../support/check/isDisplayed';
 import waitFor from '../support/action/waitFor';
 import waitForVisible from '../support/action/waitForDisplayed';
 import checkIfElementExists from '../support/lib/checkIfElementExists';
-
+import waitForEnabled from '../support/action/waitForEnabled';
 const { Then } = require('cucumber');
+
+Then(
+    /^Eu espero até que o elemento( não)* "([^"]*)?" esteja habilitado$/,
+    waitForEnabled
+);
 
 Then(
     /^I expect that the title is( not)* "([^"]*)?"$/,
@@ -78,7 +83,7 @@ Then(
 );
 
 Then(
-    /^I expect that (button|element|container) "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
+    /^Eu espero que o (botão|elemento|container) "([^"]*)?"( não)* contenha o texto "([^"]*)?"$/,
     checkContainsText
 );
 

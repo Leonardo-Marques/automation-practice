@@ -6,12 +6,12 @@
  *
  * @todo  merge with waitfor
  */
-export default (selector, falseCase) => {
+export default (falseCase, selector) => {
     /**
      * Maximum number of milliseconds to wait for
      * @type {Int}
      */
     const ms = 90000;
-
     $(selector).waitForDisplayed(ms, !!falseCase);
+    $(selector).waitForEnabled(ms, !!falseCase);
 };

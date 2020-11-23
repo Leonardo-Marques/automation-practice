@@ -7,7 +7,7 @@ import checkIfElementExists from '../lib/checkIfElementExists';
  * @param  {String}   value   The value to set the selector to
  * @param  {String}   selector Element selector
  */
-export default (method, value, selector) => {
+export default (method, value, selector, submeto) => {
     /**
      * The command to perform on the browser object (addValue or setValue)
      * @type {String}
@@ -22,5 +22,11 @@ export default (method, value, selector) => {
         checkValue = '';
     }
 
+    browser.pause(300);
+
     $(selector)[command](checkValue);
+
+    if(submeto){
+        browser.keys('Enter')
+    }
 };
